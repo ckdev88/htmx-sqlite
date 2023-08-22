@@ -1,2 +1,2 @@
 # htmx-sqlite
-Just goofing around with HTMX &amp; SQLite
+Just goofing around a bit with HTMX &amp; SQLite
