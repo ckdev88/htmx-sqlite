@@ -5,11 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
 </head>
 
 <body>
-    blabklalablabla
+    <button hx-post="/clicked" hx-swap="outerHTML">Click me</button>
+    <hr class="my-4">
+    <div hx-put="/messages">Put To Messages</div>
+    <hr class="my-4">
+    <div hx-post="/mouse_entered" hx-trigger="mouseenter">
+        Hiero muissie muissie! </div>
+
+
+
+    <script src="htmx.min.js"></script>
 </body>
 
 </html>
