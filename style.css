@@ -1,0 +1,15 @@
+html,body{
+background:black;
+color:white;
+}
+a{color:lightblue;}
+dl{display:grid;
+grid-column-end: 3;
+grid-template-columns:auto auto;
+text-align:left;
+background-color:#ffffff44;
+}
+dt{font-weight:bold}
+dt,dd{
+display:block;border-bottom:1px solid #000000aa;padding:.5em}
+dd{margin-inline-start:1em;}

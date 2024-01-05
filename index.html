@@ -8,15 +8,64 @@
 </head>
 
 <body>
-    <button hx-post="/clicked" hx-swap="outerHTML">Click me</button>
+    <h2>In a nutshell</h2>
+    <div id="parent-div">
+        <button hx-post="/clicked" hx-trigger="click" hx-target="#parent-div" hx-swap="outerHTML">Click me</button>
+        <blockquote class="border-l-lime-200">When user clicks (hx-trigger), issue HTTP POST request to '/clicked'
+            (hx-post), use its content to
+            replace (hx-swap) target element '#parent-div' (hx-target) in the DOM</blockquote>
+    </div>
     <hr class="my-4">
+    <h2>Simple hx-put request</h2>
     <div hx-put="/messages">Put To Messages</div>
     <hr class="my-4">
+    <h2>Triggering requests</h2>
     <div hx-post="/mouse_entered" hx-trigger="mouseenter">
         Hiero muissie muissie! </div>
+    <hr class="my-4">
+    <h2>Trigger modifiers</h2>
+    <input type="text" name="q" hx-get="/trigger_delay" hx-trigger="keyup changed delay:500ms"
+        hx-target="#search-results" placeholder="Search...">
+    <div id="search-results"></div>
+
+    <hr class="my-4">
+    <h2>Trigger filters</h2>
+    <div hx-get="/clicked" hx-trigger="click[ctrlKey]">press CTRL &amp; click me!</div>
+    <hr class="my-4">
+    <h2>Polling</h2>
+    <div hx-get="/news/" hx-trigger="every 500ms"></div>
+    <hr class="my-4">
+    <h2>Load polling</h2>
+    <div hx-get="/messages" hx-swap="outerHTML" hx-trigger="load delay:30s">
+    </div>
+    <h2>Patching</h2>
+    <button hx-patch="/my-account" hx-target="body">Go to my account</button>
+    <h2>Indicator</h2>
+    <button hx-get="/click" hx-trigger="click delay:2s">Click 'n load! <span class="htmx-indicator"></span></button>
+    <h2>Descriptions</h2>
+    <button hx-get="/descriptions/swapping.html" hx-target="#descriptions-swapping" hx-trigger="click">Show swapping
+        info</button>
+    <div id="descriptions-swapping"></div>
+
+
+    <h2>History &amp; URL</h2>
+    <a hx-get="/blog" hx-push-url="true" hx-target="body">Bloggy</a>
+    <br />check: <a href="https://htmx.org/docs/#response-headers">link</a>
 
 
 
+
+
+
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
     <script src="htmx.min.js"></script>
 </body>
 

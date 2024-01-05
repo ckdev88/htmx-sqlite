@@ -1,0 +1,23 @@
+<h3>Swapping (hx-swap)</h3>
+default: content replaces innerHTML of target element.
+<dl>
+    <dt>innerHTML</dt>
+    <dd>default: puts content inside target element</dd>
+    <dt>outerHTML</dt>
+    <dd>replaces entire target lement with the returned content</dd>
+    <dt>afterbegin</dt>
+    <dd>prepends the content before the first child inside the target</dd>
+    <dt>beforebegin</dt>
+    <dd>prepends the content before the target in the targets parent element</dd>
+    <dt>beforeend</dt>
+    <dd>appends the content after the last child inside the target</dd>
+    <dt>afterend</dt>
+    <dd>appends the content after the target in the targets parent element</dd>
+    <dt>delete</dt>
+    <dd>delete target element regardless of response</dd>
+    <dt>none</dt>
+    <dd>don't append content from response (<a href="https://htmx.org/docs/#oob_swaps" target="_blank">Out of Band
+            Swaps</a>
+        and <a href="https://htmx.org/docs/#response-headers" target="_blank">Response Headers</a> will be processed)
+    </dd>
+</dl>
